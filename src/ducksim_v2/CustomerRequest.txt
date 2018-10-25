@@ -1,0 +1,11 @@
+Phase 1
+Please add a new feature .
+Ducks should now be able to FLY
+Phase 2
+Add a "mech-robot-duck" that will have machine guns ,
+flame-thrower and use rocket engine to fly
+PROBLEM - with current class / interface design it is impossible to add fly()
+to Duck class . We have 3560 ducks that cannot fly (rubber, robot, wood , stone etc...)
+
+
+
