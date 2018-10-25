@@ -8,5 +8,8 @@ public class miniDuckSimulator {
         Duck rezina = new RubberDuck();
         rezina.display();
         rezina.performFly();
+        Duck razrivatel01 = new MechanoDuck();
+        razrivatel01.display();
+        razrivatel01.performFly();
     }
 }
