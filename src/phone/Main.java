@@ -1,10 +1,12 @@
+package phone;
+
 public class Main {
     public static void main(String[] args) {
 
-        //DeskPhone sergeiMPhone; // this is a valid instantiation as well
+        //phone.DeskPhone sergeiMPhone; // this is a valid instantiation as well
         // interface usage
 
-        ITelephone sergeiMPhone;
+        ITelephone sergeiMPhone; // putting I***** in front of an interface name is good
         sergeiMPhone = new DeskPhone(54686445);
 
         sergeiMPhone.powerOn();

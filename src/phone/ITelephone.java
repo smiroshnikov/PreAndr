@@ -1,3 +1,5 @@
+package phone;
+
 public interface ITelephone {
     void powerOn();
 

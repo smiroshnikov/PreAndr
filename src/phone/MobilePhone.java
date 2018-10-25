@@ -1,3 +1,5 @@
+package phone;
+
 public class MobilePhone implements ITelephone {
 
     private int myNumber;
