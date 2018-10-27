@@ -16,7 +16,7 @@ public class recall {
     }
 
     public static void main(String[] args) {
-        Resume[] storage = new Resume[1000];
+        Resume[] storage = new Resume[3];
 
         Resume r1 = new Resume();
         r1.uuid = "123";
@@ -57,6 +57,14 @@ public class recall {
 //        storage[7] = r8;
 //        storage[8] = r9;
 
-        System.out.println(ifEmpty(storage));
+        //System.out.println(ifEmpty(storage));
+        for (Resume resume : storage) {
+            if (resume == null){
+                System.out.println("null");
+            }
+            else {
+                System.out.println(resume.toString() + " <----here!");
+            }
+        }
     }
 }
