@@ -7,64 +7,50 @@ public class recall {
     private static boolean ifEmpty(Resume[] resumes) {
         boolean empty = true;
 
-        for (Resume resume : resumes)
+        for (Resume resume : resumes) {
             if (resume != null) {
                 empty = false;
+                System.out.printf("Storage is NOT empty \n");
                 break;
             }
+        }
+        if (empty) {
+            System.out.printf("Storage is EMPTY!\n");
+        }
+
         return empty;
     }
 
+    public static void addResume(Resume[] storage, int place, String uuid) {
+
+        Resume r = new Resume();
+        storage[place] = r;
+        storage[place].uuid = uuid;
+    }
+
+
     public static void main(String[] args) {
-        Resume[] storage = new Resume[3];
 
-        Resume r1 = new Resume();
-        r1.uuid = "123";
-//        Resume r2 = new Resume();
-//        r2.uuid = "234";
-//        Resume r3 = new Resume();
-//        r3.uuid = "345";
-//
-//        Resume r4 = new Resume();
-//        r4.uuid = "456";
-//
-//        Resume r5 = new Resume();
-//        r5.uuid = "567";
-//
-//        Resume r6 = new Resume();
-//        r6.uuid = "678";
-//
-//        Resume r7 = new Resume();
-//        r7.uuid = "789";
-//
-//        Resume r8 = new Resume();
-//        r8.uuid = "890";
-//
-//        Resume r9 = new Resume();
-//        r9.uuid = "999";
-//
-//        Resume r10 = new Resume();
-//        r10.uuid = "000";
-//
-//
-        storage[0] = r1;
-//        storage[1] = r2;
-//        storage[2] = r3;
-//        storage[3] = r4;
-//        storage[4] = r5;
-//        storage[5] = r6;
-//        storage[6] = r7;
-//        storage[7] = r8;
-//        storage[8] = r9;
+        Resume[] storage = new Resume[10];
+        ifEmpty(storage);
 
-        //System.out.println(ifEmpty(storage));
+        addResume(storage, 0, "3242");
+        addResume(storage, 1, "32a2");
+        addResume(storage, 2, "334232");
+        addResume(storage, 3, "32dfdg");
+        addResume(storage, 4, "3240002");
+        addResume(storage, 5, "3242111");
+        addResume(storage, 6, "324sdcgv21");
+        addResume(storage, 7, "3242345df_45435");
+
+
         for (Resume resume : storage) {
-            if (resume == null){
+            if (resume == null) {
                 System.out.println("null");
-            }
-            else {
+            } else {
                 System.out.println(resume.toString() + " <----here!");
             }
         }
+        ifEmpty(storage);
     }
 }
